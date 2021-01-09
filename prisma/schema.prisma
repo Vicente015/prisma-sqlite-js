@@ -1,0 +1,28 @@
+// Declara la base de datos
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Declara el cliente
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Declara el modelo de una publicación.
+model Post {
+  id        Int     @id @default(autoincrement())
+  title     String
+  content   String?
+  published Boolean @default(false)
+  author    User?   @relation(fields: [authorId], references: [id])
+  authorId  Int?
+}
+
+// Declara el modelo de un usuario
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+  posts Post[]
+}

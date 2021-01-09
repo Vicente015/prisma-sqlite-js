@@ -1,0 +1,29 @@
+{
+  "name": "prisma-sqlite-js",
+  "version": "1.0.0",
+  "description": "Just testing Prisma.",
+  "main": "index.js",
+  "dependencies": {
+    "@prisma/client": "^2.14.0"
+  },
+  "devDependencies": {
+    "@prisma/cli": "^2.14.0",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vicente015/prisma-sqlite-js.git"
+  },
+  "keywords": [
+    "prisma"
+  ],
+  "author": "Vicente015",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/Vicente015/prisma-sqlite-js/issues"
+  },
+  "homepage": "https://github.com/Vicente015/prisma-sqlite-js#readme"
+}
